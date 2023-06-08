@@ -342,12 +342,6 @@ class _HomePageState extends State<HomePage> {
                 ),*/
         );
   }
-
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
 }
 
 class LoginPage extends StatelessWidget {
