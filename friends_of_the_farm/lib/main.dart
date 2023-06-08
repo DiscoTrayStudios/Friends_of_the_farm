@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:friends_of_the_farm/pages/profile_page.dart';
 import 'package:friends_of_the_farm/user_home.dart';
 import 'package:friends_of_the_farm/pages/admin.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import 'dart:async'; // new
@@ -16,7 +15,6 @@ import 'package:firebase_auth/firebase_auth.dart' // new
 import 'package:firebase_core/firebase_core.dart'; // new
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart'; // new
 
 import 'firebase_options.dart'; // new
@@ -44,7 +42,6 @@ class MyApp extends StatelessWidget {
       title: 'Friends of the Farm',
       theme: ThemeData(
         primarySwatch: Colors.brown,
-        textTheme: GoogleFonts.lobsterTextTheme(),
       ),
       home: LoginScreen(),
     );
@@ -200,7 +197,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Friends of the Farm',
-            style: GoogleFonts.lobster(fontSize: 35)),
+            ),
         backgroundColor: Colors.brown,
       ),
       body: Column(mainAxisSize: MainAxisSize.min, children: [
@@ -228,7 +225,6 @@ class _HomePageState extends State<HomePage> {
               if (appState.loggedIn) ...[
                 Text(
                   'Tasks',
-                  style: GoogleFonts.lobster(fontSize: 32),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
@@ -373,8 +369,7 @@ class LoginPage extends StatelessWidget {
             ),
             Text('Friends of the Farm',
                 textAlign: TextAlign.center,
-                style:
-                    GoogleFonts.lobster(fontSize: 70.0, color: Colors.white)),
+            ),
             TextButton(
                 child: Text("Login/Signup".toUpperCase(),
                     style: TextStyle(
@@ -406,9 +401,9 @@ class _LoginScreenState extends State<LoginScreen> {
   // the initState method, and clean it up in the dispose method.
   late FocusNode myFocusNode;
   final ButtonStyle yesStyle = ElevatedButton.styleFrom(
-      textStyle: GoogleFonts.lobster(fontSize: 20), primary: Colors.blueGrey);
+      primary: Colors.blueGrey);
   final ButtonStyle noStyle = ElevatedButton.styleFrom(
-      textStyle: GoogleFonts.lobster(fontSize: 20), primary: Colors.blueGrey);
+      primary: Colors.blueGrey);
 
   @override
   void initState() {
@@ -495,9 +490,6 @@ class _LoginScreenState extends State<LoginScreen> {
               highlightColor: Colors.black,
             ),
         primarySwatch: Colors.brown,
-        textTheme: GoogleFonts.notoSerifTextTheme(
-          Theme.of(context).textTheme,
-        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     );

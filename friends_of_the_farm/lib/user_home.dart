@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:friends_of_the_farm/pages/admin.dart';
 import 'package:friends_of_the_farm/pages/profile_page.dart';
 import 'package:friends_of_the_farm/main.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 FirebaseFirestore database = FirebaseFirestore.instance;
 
@@ -221,7 +220,6 @@ class _UserHomeState extends State<UserHomePage> {
       ElevatedButton(
         key: const Key("HoursWorked"),
         style: ElevatedButton.styleFrom(
-            textStyle: GoogleFonts.lobster(fontSize: 20),
             primary: Theme.of(context).primaryColor),
         child: Text('View Hours Worked'),
         onPressed: () {
